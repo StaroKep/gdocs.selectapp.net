@@ -1,5 +1,5 @@
 module.exports.gdocsConfig = {
     APP_NAME: 'gDocs',
-    BASE_URI: '',
+    BASE_URI: '/gdocs.selectapp.net',
     DEFAULT_ARTICLE: 'About',
 };
