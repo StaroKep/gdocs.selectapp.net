@@ -7,7 +7,6 @@ import { AppPath } from './enums';
 import { infraDir } from './constants';
 
 const content = resolve(infraDir, AppPath.CONTENT);
-const compiledContent = resolve(infraDir, AppPath.COMPILED_CONTENT);
 
 /**
  * Получаем иерархию фалов
@@ -17,6 +16,7 @@ function getHierarchy() {
     console.log(infraDir);
 
     const parsedFiles = files.map(filePath => {
+        filePath = filePath.replace('\\', '/');
         const fileExtension = filePath.split('.').pop();
 
         const fileWithoutExtension = filePath.split('.').shift() || '';
@@ -36,9 +36,7 @@ function getHierarchy() {
 function writeHierarchy() {
     const filePath = resolve(infraDir, AppPath.HIERARCHY_FILE);
 
-    console.log(getHierarchy());
     const hierarchy = JSON.stringify(getHierarchy());
-    console.log(hierarchy);
     const prefix = 'export const hierarchy = ';
     const fileData = prefix.concat(hierarchy);
 
@@ -47,7 +45,7 @@ function writeHierarchy() {
             throw error;
         }
 
-        console.log('Иерархия успешно записана!');
+        console.log('HIERARCHY :: SUCCESSFUL');
     });
 }
 

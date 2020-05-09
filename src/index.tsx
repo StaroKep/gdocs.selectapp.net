@@ -3,7 +3,4 @@ import ReactDOM from 'react-dom';
 
 import { Application } from 'src/pages/Application';
 
-ReactDOM.render(
-        <Application />,
-    document.getElementById('root'),
-);
+ReactDOM.render(<Application />, document.getElementById('root'));

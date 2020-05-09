@@ -1,3 +1,1 @@
-export interface MainPageProps {
-    
-}
+export interface MainPageProps {}

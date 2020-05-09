@@ -1,1 +1,1 @@
-export const hierarchy = {"Другой раздел":{"Страница 1":"xml","Страница 2":"xml","Страница 3":"xml"},"Примеры":{"Самый первый пример":"xml","Страница 1":"xml","Страница 2":"xml","Страница 3":"xml"},"Третий раздел":{"Страница 1":"xml","Страница 2":"xml","Страница 3":"xml"}}
+export const hierarchy = {"About":"md","section":{"example":"md","example2":"md"},"section2":{"example":"md","example2":"md"},"section3":{"example":"md","example2":"md"}}

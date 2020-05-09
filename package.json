@@ -1,5 +1,5 @@
 {
-  "name": "payment-widget-documentation",
+  "name": "gdocs.selectapp.net",
   "version": "0.0.0",
   "description": "Modern beautiful documentation",
   "main": "index.js",
@@ -10,16 +10,19 @@
     "infrastructure:run": "node infrastructure/dist/main.js",
     "infrastructure:build:run": "npm run infrastructure:build && npm run infrastructure:run",
     "prettier:fix": "prettier --write ./src/**/*.{ts,js,tsx,css,scss,jsx,html,json}",
-    "stylelint:fix": "stylelint **/*.scss --fix --config .stylelintrc"
+    "stylelint:fix": "stylelint **/*.pcss --fix --config .stylelintrc",
+    "build": "npm run infrastructure:run && npm run production:build"
   },
   "author": "Kirill Eremin",
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.9.13",
     "@material-ui/icons": "^4.9.1",
+    "@types/markdown-it": "^10.0.1",
     "classnames": "^2.2.6",
     "html-webpack-inline-source-plugin": "0.0.10",
     "lodash": "^4.17.15",
+    "markdown-it": "^10.0.0",
     "query-string": "^6.12.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

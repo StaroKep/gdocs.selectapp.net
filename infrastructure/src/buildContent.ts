@@ -6,7 +6,6 @@ import {AppPath} from './enums';
 import {infraDir} from './constants';
 
 const content = resolve(infraDir, AppPath.CONTENT);
-const compiledContent = resolve(infraDir, AppPath.COMPILED_CONTENT);
 
 /**
  * Генерируем объект с контентом
@@ -16,9 +15,10 @@ function generateDataObject() {
     const data = {};
 
     files.forEach(file => {
+        file = file.replace('\\', '/');
         const name = file.split('.').shift();
         data[name] = fs.readFileSync(resolve(content, file), 'utf-8');
-    })
+    });
 
     return data;
 }
@@ -38,7 +38,7 @@ function writeContent() {
             throw error;
         }
 
-        console.log('Контент успешно записан!');
+        console.log('CONTENT :: SUCCESSFUL');
     });
 }
 

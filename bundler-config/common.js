@@ -1,7 +1,8 @@
-const path = require('path');
-const root = path.resolve(__dirname, '../');
+const { DefinePlugin } = require('webpack');
 
-module.exports.applicationName = 'Payment Widget';
+const path = require('path');
+const { gdocsConfig } = require('./dataConfig');
+const root = path.resolve(__dirname, '../');
 
 module.exports.root = root;
 module.exports.entry = path.resolve(root, 'src/index.tsx');
@@ -15,8 +16,8 @@ module.exports.resolve = {
 };
 
 module.exports.output = {
-    filename: 'main.js',
-    path: path.resolve(root, 'dist'),
+    filename: 'index.js',
+    path: root,
 };
 
 module.exports.configModule = {
@@ -64,4 +65,10 @@ module.exports.configModule = {
             ],
         },
     ],
+};
+
+module.exports.applicationConfig = {
+    'process.env.APP_NAME': JSON.stringify(gdocsConfig.APP_NAME),
+    'process.env.BASE_URI': JSON.stringify(gdocsConfig.BASE_URI),
+    'process.env.DEFAULT_ARTICLE': JSON.stringify(gdocsConfig.DEFAULT_ARTICLE),
 };

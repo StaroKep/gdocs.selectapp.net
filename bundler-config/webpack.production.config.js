@@ -4,7 +4,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 
 /** Common config */
-const { entry, resolve, output, configModule, htmlTemplate, applicationName } = require('./common');
+const { entry, resolve, output, configModule, htmlTemplate, applicationConfig } = require('./common');
 
 console.log(`
     ----------
@@ -27,7 +27,7 @@ module.exports = env => ({
         new DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(env.APP_ENV),
             'process.env.APP_ENV': JSON.stringify(env.APP_ENV),
-            'process.env.APP_NAME': JSON.stringify(applicationName),
+            ...applicationConfig,
         }),
         new HtmlWebpackInlineSourcePlugin(),
     ],

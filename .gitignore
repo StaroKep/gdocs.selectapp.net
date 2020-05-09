@@ -1,5 +1,6 @@
 # files
 .DS_Store
+index.js
 
 # dirs
 .idea

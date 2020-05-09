@@ -1,13 +1,11 @@
 import React, { FunctionComponent } from 'react';
-import { Router, Route, Switch } from 'react-router';
+import { Route, Router, Switch } from 'react-router';
 import { createBrowserHistory } from 'history';
 import cn from 'classnames/bind';
 
-import Typography from '@material-ui/core/Typography';
-
 import { MainPage } from 'src/pages/MainPage';
 
-import { Path } from 'src/routerConfig';
+import { getPath, RouterPath } from 'src/routerConfig';
 
 import * as styles from './Application.pcss';
 
@@ -18,7 +16,7 @@ export const Application: FunctionComponent = () => {
         <div className={cx('root')}>
             <Router history={createBrowserHistory()}>
                 <Switch>
-                    <Route path={Path.HOME}>
+                    <Route path={getPath(RouterPath.HOME)}>
                         <MainPage />
                     </Route>
                 </Switch>
