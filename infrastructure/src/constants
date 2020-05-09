@@ -1,0 +1,1 @@
+export const infraDir = process.env.DIR_NAME;

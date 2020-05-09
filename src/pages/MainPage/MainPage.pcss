@@ -1,0 +1,47 @@
+.root {
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+
+   .page-element {
+      min-width: 20%;
+      position: relative;
+   }
+
+   .title {
+      font-weight: 500;
+      margin: 1rem 0 0 0;
+   }
+
+   .drawer, .second-drawer {
+      width: 20%;
+   }
+
+   .paper, .second-paper {
+      width: 20%;
+   }
+
+   .second-drawer,
+   .second-paper {
+      left: calc(20% + 1px);
+   }
+
+   .link {
+      text-decoration: none;
+      color: inherit;
+   }
+
+   .content {
+      padding: 1rem;
+      width: 100%;
+      flex: 1 1 100%;
+   }
+
+   .fixed-link {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      display: block;
+      padding: 5px;
+   }
+}

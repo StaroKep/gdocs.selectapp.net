@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["dom", "ESNext"],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+
+    "allowJs": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "allowSyntheticDefaultImports": true,
+
+    "baseUrl": "./",
+    "paths": {
+      "src": ["src/index"]
+    }
+  },
+  "include": ["src/**/*", "types/**/*", "infrastructure/**/*", "node_modules/@types"]
+}
